@@ -14,20 +14,14 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
 
-    if @blog.save
-      render 'show', status: :created, location: @blog
-    else
-      render json: @blog.errors, status: :unprocessable_entity
-    end
+    @blog.save!
+    render 'show', status: :created, location: @blog
   end
 
   # PATCH/PUT /blogs/1
   def update
-    if @blog.update(blog_params)
-      render 'show'
-    else
-      render json: @blog.errors, status: :unprocessable_entity
-    end
+    @blog.update!(blog_params)
+    render 'show'
   end
 
   # DELETE /blogs/1

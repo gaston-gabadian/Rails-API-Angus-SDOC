@@ -1,3 +1,9 @@
+GIT
+  remote: git@github.com:thisisqubika/angus-sdoc.git
+  revision: 737ac9f5073348a24f11a9852262fd0c75e35a2f
+  specs:
+    angus-sdoc (0.0.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -198,6 +204,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  angus-sdoc!
   bootsnap
   debug
   jbuilder

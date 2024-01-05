@@ -1,0 +1,3 @@
+service:   'Rails Blogs API'
+code_name: 'rails-blogs-api'
+version:   '1.0'

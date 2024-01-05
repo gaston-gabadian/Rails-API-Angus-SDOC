@@ -1,0 +1,19 @@
+show:
+  name: Show a blog.
+  description: Shows a blog.
+
+  path: /blogs/:id
+  method: get
+  uri:
+    - element: id
+      description: 'Id of the blog to show'
+
+  response:
+    - element: blog
+      description: 'blog to show'
+      required: true
+      type: blog     # This name should exists as a key on representations.yml file.
+
+  messages:
+    - key: ResourceNotFound
+      description: 'We could not found a blog with that id'

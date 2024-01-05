@@ -1,0 +1,9 @@
+ResourceNotFound:
+  status_code: 404
+  level: "error"
+  description: "We could not found that resource"
+
+ResourceInvalid:
+  status_code: 422
+  level: "error"
+  description: "There is an error with the provided information."

@@ -1,0 +1,13 @@
+blog:
+  - field: id
+    description: Blog id
+    required: true
+    type: integer
+  - field: title
+    description: title of the blog.
+    required: true
+    type: string
+  - field: content
+    description: content of the blog.
+    required: true
+    type: string
