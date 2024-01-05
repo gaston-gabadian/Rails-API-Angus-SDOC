@@ -1,0 +1,4 @@
+rails-blogs-api:
+  v1.0:
+    api_url: http://localhost:3000/
+    doc_url: http://localhost:3000/docs/1.0/

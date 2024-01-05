@@ -1,0 +1,29 @@
+GIT
+  remote: https://github.com/moove-it/angus-remote.git
+  revision: de36973184388a6ea930362a136cff7b27c96787
+  branch: gems-upgrade
+  specs:
+    angus-remote (0.0.16)
+      angus-sdoc (~> 0.0, >= 0.0.6)
+      multipart-post (>= 2.3.0)
+      persistent_http (~> 2.0.3)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    angus-sdoc (0.0.7)
+    concurrent-ruby (1.2.2)
+    gene_pool (1.5.0)
+      concurrent-ruby (>= 1.0)
+    multipart-post (2.3.0)
+    persistent_http (2.0.3)
+      gene_pool (>= 1.3)
+
+PLATFORMS
+  arm64-darwin-23
+
+DEPENDENCIES
+  angus-remote!
+
+BUNDLED WITH
+   2.3.26

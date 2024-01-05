@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   
   resources :blogs
 
-  get 'docs/:version' => "docs#show", constraints: { version: /v\d\.\d/ }
+  get 'docs/:version' => "docs#show", constraints: { version: /\d\.\d/ }
 end

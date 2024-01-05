@@ -1,0 +1,5 @@
+source 'http://rubygems.org'
+
+gem 'angus-remote',
+  git: 'https://github.com/moove-it/angus-remote.git',
+  branch: 'gems-upgrade'
