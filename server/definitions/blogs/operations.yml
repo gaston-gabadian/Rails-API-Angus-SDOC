@@ -17,3 +17,16 @@ show:
   messages:
     - key: ResourceNotFound
       description: 'We could not found a blog with that id'
+
+list:
+  name: List blogs.
+  description: List blogs based on filters.
+
+  path: /blogs
+  method: get
+
+  response:
+    - element: blogs
+      description: 'list of blogs'
+      required: true
+      elements_type: blog     # This name should exists as a key on representations.yml file.
