@@ -2,7 +2,7 @@ show:
   name: Show a blog.
   description: Shows a blog.
 
-  path: /blogs/:id
+  path: blogs/:id
   method: get
   uri:
     - element: id
@@ -22,7 +22,7 @@ list:
   name: List blogs.
   description: List blogs based on filters.
 
-  path: /blogs
+  path: blogs
   method: get
 
   response:
@@ -30,3 +30,65 @@ list:
       description: 'list of blogs'
       required: true
       elements_type: blog     # This name should exists as a key on representations.yml file.
+
+create:
+  name: Create a blog.
+  description: Creates a blog.
+
+  path: blogs
+  method: post
+
+  request:
+    - element: blog
+      description: 'blog to create'
+      required: true
+      type: blog
+
+  response:
+    - element: blog
+      description: 'blog created'
+      required: true
+      type: blog     # This name should exists as a key on representations.yml file.
+
+  messages:
+    - key: ResourceInvalid
+      description: 'Blog has invalid attributes.'
+
+update:
+  name: Update a blog.
+  description: Updates a blog.
+
+  path: blogs/:id
+  method: put
+
+  request:
+    - element: blog
+      description: 'blog to update'
+      required: true
+      type: blog
+
+  response:
+    - element: blog
+      description: 'blog updated'
+      required: true
+      type: blog     # This name should exists as a key on representations.yml file.
+
+  messages:
+    - key: ResourceInvalid
+      description: 'Blog has invalid attributes.'
+    - key: ResourceNotFound
+      description: 'We could not found a blog with that id'
+
+destroy:
+  name: Delete a blog.
+  description: Deletes a blog.
+
+  path: blogs/:id
+  method: delete
+  uri:
+    - element: id
+      description: 'Id of the blog to delete'
+
+  messages:
+    - key: ResourceNotFound
+      description: 'We could not found a blog with that id'
